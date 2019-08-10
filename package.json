@@ -1,5 +1,5 @@
 {
-  "name": "cache",
+  "name": "cache_stempede_avoider",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Tomer Lotan",
   "license": "ISC",
   "dependencies": {
     "nodemon": "^1.19.1"

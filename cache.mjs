@@ -7,6 +7,7 @@ class SingletonCache {
 
     SingletonCache.instance = this;
     this.cache = {};
+    this.cacheStampedeAvoider = {};
     this.cacheHits = 0;
     this.dbHits = 0;
 
@@ -14,7 +15,7 @@ class SingletonCache {
   }
 
   getDataFromCache(cacheKey) {
-    new Promise(resolve => {
+    return new Promise(resolve => {
       this.cacheHits += 1;
       setTimeout(() => {
         if (this.cache[cacheKey]) {
@@ -28,7 +29,7 @@ class SingletonCache {
   }
 
   setDataInCache(cacheKey) {
-    new Promise(resolve => {
+    return new Promise(resolve => {
       console.log('setting cache');
       this.cacheHits += 1;
       setTimeout(() => {
